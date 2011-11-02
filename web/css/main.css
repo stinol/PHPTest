@@ -1,0 +1,38 @@
+@font-face {
+	font-family: 'Clarendon';
+	src: url('/css/fonts/Clarendon-Light.otf') format('opentype');
+	font-weight: 200;
+	font-style: normal;
+}
+html, body { width: 100%; }
+
+.container {
+    margin: 0 auto;
+    max-width: 1118px;
+}
+
+body{
+    font-family: "Lucida Sans Unicode","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+
+}
+
+header {
+    background-color: #313131;
+    text-align: center;
+}
+
+h1 {
+    color: #eeeeee;
+    font-family: 'Clarendon', geneva, serif;
+    padding:  0.75em 0;
+}
+
+li{
+    display: inline-block;
+}
+
+#content { margin: 0 auto; }
+
+button{ font-size: 1em; }
+
+form label{ clear: both; }

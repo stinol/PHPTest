@@ -1,0 +1,8 @@
+cache/*
+log/*
+.idea/*
+.buildpath
+.project
+*.iml
+*.orig
+.settings/*

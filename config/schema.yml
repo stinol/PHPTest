@@ -1,0 +1,31 @@
+#propel:
+#  # connection attributes
+#  _attributes:
+#    noXsd: false
+#    defaultIdMethod: native
+#    package: lib.model
+#
+#  question_categories:
+#    _attributes: { phpName: QuestionCategory, package: lib.model.categories }
+#    id: ~
+#    question_category_id: ~
+#
+#  question_categories_i18n:
+#    _attributes: { phpName: QuestionCategoryI18n, package: lib.model.categories }
+#    name: { type: varchar(50) }
+#
+#  questions:
+#    _attributes: { phpName: Question, package: lib.model.questions }
+#    question_category_id: ~
+#    validation_type:  { type: enum, valueSet: "text, email, postalCode, number", default: text }
+#
+#  questions_i18n:
+#    _attributes: { phpName: QuestionI18n, package: lib.model.questions }
+#    description:  { type: varchar(255) }
+#
+#  answers:
+#    _attributes: { phpName: Answer, package: lib.model.answers }
+#    created_at: ~
+#    updated_at: ~
+#    question_id: ~
+#    answer:  { type: varchar(255) }

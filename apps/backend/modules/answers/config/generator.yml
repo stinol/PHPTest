@@ -1,0 +1,28 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Answer
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          answer
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        object_actions: []
+        batch_actions: []
+        actions: []
+        display: [Question, answer]
+        sort: [question_id, asc]
+        table_method: retrieveWithQuestionsForList
+      filter:
+        class: false
+      form:    ~
+      edit:    ~
+      new:     ~

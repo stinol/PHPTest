@@ -1,0 +1,64 @@
+options:
+  collate: utf8_unicode_ci
+  charset: utf8
+
+detect_relations: false
+
+QuestionCategory:
+  tableName: question_categories
+  columns:
+    question_category_id: { type: integer, notnull: false }
+    name:
+      type: string(50)
+  relations:
+    ParentCaregory:
+      class: QuestionCategory
+      local: question_category_id
+      foreign: id
+      foreignAlias: SubCategories
+      foreignClass: QuestionCategory
+      type: one
+      foreignType: many
+
+Question:
+  tableName: questions
+  columns:
+    question_category_id: { type: integer, notnull: true}
+    validation_type:
+      type: enum
+      values: [text, email, postalCode, number]
+      notnull: true
+      default: text
+    description:
+      type: string(255)
+  relations:
+    QuestionCategory:
+      class: QuestionCategory
+      local: question_category_id
+      foreign: id
+      type: one
+      foreignType: many
+      foreignAlias: Questions
+
+Answer:
+  tableName: answers
+  actAs: [Timestampable]
+  columns:
+    session_id:  { type: string(255), notnull: true }
+    question_id: { type: integer, notnull: true }
+    answer:
+      type: clob
+      notnull: true
+  indexes:
+   idx_session_question:
+     fields: [session_id, question_id]
+     type: unique
+   idx_session:
+     fields: [session_id]
+  relations:
+    Question:
+      local: question_id
+      foreign: id
+      type: one
+      foreignType: many
+      foreignAlias: Answers

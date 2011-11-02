@@ -1,0 +1,67 @@
+QuestionCategory:
+  QuestionCategory_histoire:
+    name: histoire
+  QuestionCategory_divers:
+    name: divers
+  QuestionCategory_musique:
+    name: musique
+
+  QuestionCategory_histoire_20e_siecle:
+    ParentCaregory: QuestionCategory_histoire
+    name: "20e siecle"
+  QuestionCategory_histoire_antiquite:
+    ParentCaregory: QuestionCategory_histoire
+    name: "antique"
+
+  QuestionCategory_divers_canada:
+    ParentCaregory: QuestionCategory_divers
+    name: "Canada"
+  QuestionCategory_divers_internet:
+    ParentCaregory: QuestionCategory_divers
+    name: "internet"
+
+  QuestionCategory_musique_metal:
+    ParentCaregory: QuestionCategory_musique
+    name: "metal"
+  QuestionCategory_musique_beatles:
+    ParentCaregory: QuestionCategory_musique
+    name: "The Beatles"
+
+
+Question:
+  Question_1:
+    QuestionCategory: QuestionCategory_histoire_20e_siecle
+    validation_type: text
+    description: "Quelles-sont les dates de debut et de fin de la Grande Guerre ?"
+  Question_2:
+    QuestionCategory: QuestionCategory_histoire_20e_siecle
+    validation_type: number
+    description: "En quelle annee la Crise d'Octobre a-t-elle eu lieu ?"
+  Question_3:
+    QuestionCategory: QuestionCategory_histoire_20e_siecle
+    validation_type: text
+    description: "Quel etait l'enjeu de la revolution Russe ?"
+
+  Question_4:
+    QuestionCategory: QuestionCategory_histoire_antiquite
+    validation_type: text
+    description: "Qui a fonde Constantinople ?"
+
+  Question_5:
+    QuestionCategory: QuestionCategory_divers_canada
+    validation_type: postalCode
+    description: "Quel est le code postal de la Place Ville-Marie, a Montreal ?"
+
+  Question_6:
+    QuestionCategory: QuestionCategory_divers_internet
+    validation_type: email
+    description: "Si je m'appelle John Doe et que je travaille pour Ford Canada, quelle sera mon adresse de courriel ?"
+
+  Question_7:
+    QuestionCategory: QuestionCategory_musique_beatles
+    validation_type: text
+    description: "Qui, de John, Paul ou George, a ecrit la chanson Lucy in the Sky with Diamonds ?"
+  Question_8:
+    QuestionCategory: QuestionCategory_musique_metal
+    validation_type: text
+    description: "Nommer un groupe metal des annees 80."
